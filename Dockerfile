@@ -1,7 +1,7 @@
 FROM golang:1.17-alpine AS build
 
-WORKDIR /src/
-COPY app.go go.* /src/
+WORKDIR /home/ksenia/courseProject
+COPY go.mod go.sum app.go /home/ksenia/courseProject
 RUN CGO_ENABLED=0 go build -o /bin/demo
 
 FROM scratch
