@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git ssh: 'git@github.com:ksukuz/courseProject.git'
+                git url: 'https://github.com/ksukuz/courseProject.git'
             }
         }
         stage('Docker Build') {
