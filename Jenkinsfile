@@ -1,5 +1,5 @@
 pipeline {
-    agent devPC
+    agent dev
 
     stages {
         stage('Checkout') {
