@@ -1,7 +1,7 @@
 FROM golang:1.17-alpine AS build
 
-WORKDIR .
-COPY . .
+WORKDIR /var/www
+COPY app.go go.mod go.sum /var/www
 RUN CGO_ENABLED=0 go build -o /bin/demo
 
 
