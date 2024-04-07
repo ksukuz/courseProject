@@ -10,13 +10,6 @@ pipeline {
             }
         }
         stage('Docker Build') {
-       	    when {
-       	    	anyOf {
-       	    		branch 'master'
-       	    		branch 'develop'
-       	    		branch 'feature'
-       	    	}
-       	    }
             steps {
                 script {
                   sh 'docker build -t app-go-image .'
