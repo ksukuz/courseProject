@@ -4,11 +4,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/ksukuz/courseProject.git'
-            }
-        }
         stage('Docker Build') {
             steps {
                 script {
