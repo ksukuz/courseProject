@@ -1,4 +1,4 @@
-FROM golang:1.17-alpine AS build ENV GO111MODULE=auto
+FROM golang:1.17-alpine AS build
 
 WORKDIR /var/www
 COPY app.go go.mod go.sum /var/www
