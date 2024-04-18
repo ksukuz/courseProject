@@ -4,10 +4,13 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 )
 
+// handler выводит приветственное сообщение и текущее время сервера
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, 世界")
+	currentTime := time.Now().Format("2006-01-02 15:04:05") // Форматирование времени
+	fmt.Fprintf(w, "Hello, 世界! The current server time is: %s", currentTime)
 }
 
 func main() {
@@ -15,3 +18,4 @@ func main() {
 	fmt.Println("Running demo app. Press Ctrl+C to exit...")
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
+
