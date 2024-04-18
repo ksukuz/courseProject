@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     sh 'docker tag app-go-image kuzmitskaya/app-go-image:latest'
-                    sh 'docker push kuzmitskaya/app-go:latest'
+                    sh 'docker push kuzmitskaya/app-go-image:latest'
                 }
             }
         }
