@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'devPC'
+        label 'MeRunner'
     }
 
     stages {
